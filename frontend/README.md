@@ -564,3 +564,18 @@ MongoDB Atlas
 
 GitHub:
 https://github.com/Sayeelshetty/Leave-Management-System
+
+
+## Demo Login Credentials
+
+### Admin
+Email:admin@leave.com
+Password:admin@8971
+
+### Employee
+Email:manoj@gmail.com
+Password:manoj@123
+
+### Employee
+Email: employee@test.com
+Password: Test@12345
