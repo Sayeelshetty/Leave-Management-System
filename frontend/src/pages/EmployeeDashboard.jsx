@@ -14,6 +14,8 @@ function EmployeeDashboard() {
 
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
+  const [historyFilter, setHistoryFilter] = useState("all");
+
 
   const [formData, setFormData] = useState({
     leaveType: "casual",
@@ -185,6 +187,29 @@ function EmployeeDashboard() {
   };
 
   const requestedDays = calculateDays();
+
+  const scrollToSection = (ref, filter = null) => {
+  if (filter) {
+    setHistoryFilter(filter);
+  }
+
+  setTimeout(() => {
+    ref.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }, 50);
+};
+
+const filteredLeaves = useMemo(() => {
+  if (historyFilter === "all") {
+    return leaves;
+  }
+
+  return leaves.filter(
+    (leave) => leave.status === historyFilter
+  );
+}, [leaves, historyFilter]);
 
   return (
     <div className="employee-dashboard">
