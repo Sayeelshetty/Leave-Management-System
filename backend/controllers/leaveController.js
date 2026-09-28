@@ -37,11 +37,25 @@ const applyLeave = async (req, res) => {
     }
 
     if (end < start) {
-      return res.status(400).json({
-        success: false,
-        message: "End date cannot be before start date",
-      });
-    }
+  return res.status(400).json({
+    success: false,
+    message: "End date cannot be before start date",
+  });
+}
+
+// Prevent employees from applying for leave in the past
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+
+const requestedStartDate = new Date(start);
+requestedStartDate.setHours(0, 0, 0, 0);
+
+if (requestedStartDate < today) {
+  return res.status(400).json({
+    success: false,
+    message: "Leave start date cannot be in the past",
+  });
+}
 
     const numberOfDays = calculateDays(startDate, endDate);
 
