@@ -516,20 +516,21 @@ Production Update Process
 5. Hosting platform builds the application
         ↓
 6. Verify the deployed application
-Live Deployment
+
+Live Demo:
+https://leave-management-system-delta-seven.vercel.app
 
 Frontend:
-
-TO BE ADDED AFTER DEPLOYMENT
+Vercel
 
 Backend:
+https://leave-management-system-r7z5.onrender.com
 
-TO BE ADDED AFTER DEPLOYMENT
+Database:
+MongoDB Atlas
 
-GitHub Repository:
-
-TO BE ADDED
-Future Improvements
+GitHub:
+https://github.com/Sayeelshetty/Leave-Management-System
 
 Possible future improvements include:
 
@@ -549,10 +550,17 @@ Sayeel Shetty
 
 Full Stack Developer
 
+Live Demo:
+https://leave-management-system-delta-seven.vercel.app
 
-### Important
+Frontend:
+Vercel
 
-Don't replace the README with a fake deployment URL yet. I've deliberately left:
+Backend:
+https://leave-management-system-r7z5.onrender.com
 
-```text
-TO BE ADDED AFTER DEPLOYMENT
+Database:
+MongoDB Atlas
+
+GitHub:
+https://github.com/Sayeelshetty/Leave-Management-System
