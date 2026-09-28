@@ -4,6 +4,7 @@ require("dotenv").config();
 
 const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
+const leaveRoutes = require("./routes/leaveRoutes");
 const { protect } = require("./middleware/authMiddleware");
 
 const app = express();
@@ -15,10 +16,11 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
-// Public routes
+// Routes
 app.use("/api/auth", authRoutes);
+app.use("/api/leaves", leaveRoutes);
 
-// Protected test route
+// Protected user route
 app.get("/api/auth/me", protect, (req, res) => {
   res.status(200).json({
     success: true,
